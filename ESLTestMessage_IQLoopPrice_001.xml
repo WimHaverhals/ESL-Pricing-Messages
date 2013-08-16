@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+This XML Document contains a Request/Response Sample.   Sending in the given Request should provide the 
+response message listed in this document.
+-->
+<ESLPriceRequest xmlns="http://www.centurylink.com/XMLSchema/ESL">
+    <GenericInfo>
+        <OpptyId>006F000000K6tFQIAZ</OpptyId>
+        <RequestId>247012</RequestId>
+        <BrandInfo>
+            <BrandSequenceId>1</BrandSequenceId>
+            <Brand>Q.ADVAN M</Brand>
+            <Term>36</Term>
+            <Commit>1000.0</Commit>
+        </BrandInfo>
+        <CallingSystemName>CPQ</CallingSystemName>
+        <RequestType>GenerateQuote</RequestType>
+        <EZPricing>true</EZPricing>
+        <FDPricing>true</FDPricing>
+        <PriceCurrencyType>USD</PriceCurrencyType>
+    </GenericInfo>
+    <LocationInfo>
+        <ExternalLocationRef>
+            <LocationSource>SFDC</LocationSource>
+            <LocationIdentifier>
+                <LocationReferenceID>2917991</LocationReferenceID>
+            </LocationIdentifier>
+        </ExternalLocationRef>
+    </LocationInfo>
+    <PriceItemList>
+        <PriceItemInfo>
+            <LineGroupId>2</LineGroupId>
+            <LineId>4</LineId>
+            <BrandSequenceId>1</BrandSequenceId>
+            <LocationIdentifier>
+                <LocationReferenceID>2917991</LocationReferenceID>
+            </LocationIdentifier>
+            <LineItemProductAttrList>
+                <LineItemProductAttr>
+                    <ProductAttrName>AccessMethodCode</ProductAttrName>
+                    <ProductAttrValue>LL</ProductAttrValue>
+                </LineItemProductAttr>
+                <LineItemProductAttr>
+                    <ProductAttrName>ApplicationCode</ProductAttrName>
+                    <ProductAttrValue>WAN</ProductAttrValue>
+                </LineItemProductAttr>
+                <LineItemProductAttr>
+                    <ProductAttrName>ServiceCatCode</ProductAttrName>
+                    <ProductAttrValue>IQ</ProductAttrValue>
+                </LineItemProductAttr>
+                <LineItemProductAttr>
+                    <ProductAttrName>PricingSource</ProductAttrName>
+                    <ProductAttrValue>CCSS^CCSS</ProductAttrValue>
+                </LineItemProductAttr>
+                <LineItemProductAttr>
+                    <ProductAttrName>MRCPricingSource</ProductAttrName>
+                    <ProductAttrValue>CCSS</ProductAttrValue>
+                </LineItemProductAttr>
+                <LineItemProductAttr>
+                    <ProductAttrName>NRCPricingSource</ProductAttrName>
+                    <ProductAttrValue>CCSS</ProductAttrValue>
+                </LineItemProductAttr>
+                <LineItemProductAttr>
+                    <ProductAttrName>MRCTargetItemCode</ProductAttrName>
+                    <ProductAttrValue>LOOP MRC</ProductAttrValue>
+                </LineItemProductAttr>
+                <LineItemProductAttr>
+                    <ProductAttrName>NRCTargetItemCode</ProductAttrName>
+                    <ProductAttrValue>LOOP NRC</ProductAttrValue>
+                </LineItemProductAttr>
+                <LineItemProductAttr>
+                    <ProductAttrName>CGCode</ProductAttrName>
+                    <ProductAttrValue>LL</ProductAttrValue>
+                </LineItemProductAttr>
+            </LineItemProductAttrList>
+            <SourceItemCode>Special Access - CenturyLink Provided</SourceItemCode>
+            <TargetItemCodes>LOOP MRC^LOOP NRC</TargetItemCodes>
+            <ItemAttributeList>
+                <ItemAttribute>
+                    <Name>LOC_ACC_CAT</Name>
+                    <Value>CENTURYLINK</Value>
+                </ItemAttribute>
+                <ItemAttribute>
+                    <Name>TRANS_PROTOC</Name>
+                    <Value>SPECIAL ACCESS</Value>
+                </ItemAttribute>
+                <ItemAttribute>
+                    <Name>CIRCUIT_SPD</Name>
+                    <Value>DS-1</Value>
+                </ItemAttribute>
+                <ItemAttribute>
+                    <Name>CIRCUIT_TERM</Name>
+                    <Value>36</Value>
+                </ItemAttribute>
+                <ItemAttribute>
+                    <Name>LOC_ACC_TYP</Name>
+                    <Value/>
+                </ItemAttribute>
+                <ItemAttribute>
+                    <Name>CARRIER_NM</Name>
+                    <Value>ATT</Value>
+                </ItemAttribute>
+                <ItemAttribute>
+                    <Name>CCSS_BACKBP</Name>
+                    <Value>IQ Internet Port</Value>
+                </ItemAttribute>
+                <ItemAttribute>
+                    <Name>CCSS_SPD</Name>
+                    <Value>DS-1</Value>
+                </ItemAttribute>
+                <ItemAttribute>
+                    <Name>_IQP_FLAVOR</Name>
+                    <Value>STANDARD</Value>
+                </ItemAttribute>
+                <ItemAttribute>
+                    <Name>BACK_BONE</Name>
+                    <Value>IQ</Value>
+                </ItemAttribute>
+                <ItemAttribute>
+                    <Name>LL_INTL_IND</Name>
+                    <Value>DOMESTIC</Value>
+                </ItemAttribute>
+                <ItemAttribute>
+                    <Name>ELACP_HNDOFF</Name>
+                    <Value>NA</Value>
+                </ItemAttribute>
+                <ItemAttribute>
+                    <Name>CG_APP_CODE</Name>
+                    <Value>WAN</Value>
+                </ItemAttribute>
+            </ItemAttributeList>
+        </PriceItemInfo>
+    </PriceItemList>
+</ESLPriceRequest>
+
+<!-- ************************************ -->
+<!-- ** NOW COMES THE RESPONSE MESSAGE ** -->
+<!-- ************************************ -->
+<ESLPriceResponse>
+   <ProcessStatus>SUCCESS</ProcessStatus>
+   <PriceItemResponse>
+      <LineGroupId>2</LineGroupId>
+      <LineId>4</LineId>
+      <BrandSequenceId>1</BrandSequenceId>
+      <LocationReferenceID>2917991</LocationReferenceID>
+      <SourceItemCode>Special Access - CenturyLink Provided</SourceItemCode>
+      <ItemAttributeList>
+         <ItemAttribute>
+            <Name>LL_TRACK_ID</Name>
+            <Value>130816346370</Value>
+         </ItemAttribute>
+      </ItemAttributeList>
+      <ItemPriceList>
+         <MRCPrice>
+            <ComponentCode>LOOP MRC</ComponentCode>
+            <ICBFlag>false</ICBFlag>
+            <ItemListPrice>150</ItemListPrice>
+            <ItemFinalPrice>150</ItemFinalPrice>
+         </MRCPrice>
+         <NRCPrice>
+            <ComponentCode>LOOP NRC</ComponentCode>
+            <ICBFlag>false</ICBFlag>
+            <ItemListPrice>0</ItemListPrice>
+            <ItemFinalPrice>0</ItemFinalPrice>
+         </NRCPrice>
+      </ItemPriceList>
+      <PricingMessageList>
+         <PricingMessage>
+            <Status>INFO</Status>
+            <Code>930007</Code>
+            <Message>CP to SWC distance (0.6416 miles) is set based on passed CP Vert = 
+            7498.89002441693
+             and CP Horiz = 
+            5899.82344670653
+             to SWC Vert = 7498 and SWC Horiz = 5898.</Message>
+            <AdditionalMessage/>
+         </PricingMessage>
+         <PricingMessage>
+            <Status>INFO</Status>
+            <Code>801042</Code>
+            <Message>CSWC: DNVRCOCP - Phase II Wire Center, CTE To EU Phase I Relief, Zone 1; HUB: DNVRCOMA - Phase II Wire Center, CTE To EU Phase I Relief, Zone 1</Message>
+            <AdditionalMessage/>
+         </PricingMessage>
+      </PricingMessageList>
+   </PriceItemResponse>
+</ESLPriceResponse>
